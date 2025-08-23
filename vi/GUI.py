@@ -6,6 +6,18 @@ root.geometry("550x675")
 root.resizable(False,False)
 root.config(bg="#6F8FAF")
 
+#ask fun
+def ask():
+    print("ask")
+ 
+#send fun
+def send():
+    print("send")
+
+#del_text
+def del_text():
+    print("delete")
+
 #frame
 frame=LabelFrame(root,padx=100,pady=7,borderwidth=3,relief="raised")
 frame.config(bg="#6F8FAF")
@@ -29,7 +41,19 @@ text.place(x=10,y=300,height=90)
 #adding entry widgit
 
 entry=Entry(root,justify=CENTER)
-entry.place(x=100,y=450,width=350,height=30)
+entry.place(x=100,y=430,width=350,height=30)
 
+#button1
+
+Button1=Button(root,text="ASK",bg="#356696",pady=16,padx=30,borderwidth=3,relief=SOLID,command=ask)
+Button1.place(x=70,y=500)
+
+#button 2
+Button2=Button(root,text="SEND",bg="#356696",pady=16,padx=30,borderwidth=3,relief=SOLID,command=send)
+Button2.place(x=400,y=500)
+
+#button 3
+Button3=Button(root,text="DELETE",bg="#356696",pady=16,padx=30,borderwidth=3,relief=SOLID,command=del_text)
+Button3.place(x=225,y=500)
 
 root.tk.mainloop()
