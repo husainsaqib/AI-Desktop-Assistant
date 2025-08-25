@@ -11,4 +11,4 @@ def text_to_speech(text):
     engine.runAndWait()
 
 
-text_to_speech("hello world")
+text_to_speech()
