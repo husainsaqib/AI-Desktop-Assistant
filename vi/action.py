@@ -2,6 +2,7 @@ import text_to_speech
 import speech_to_text
 import datetime
 import webbrowser
+import weather
 
 user_data=speech_to_text.speech_to_text()
 
@@ -33,6 +34,11 @@ elif "play youtube" in user_data:
 elif "open udemy" in user_data:
     webbrowser.open("https://google.com/")
     text_to_speech.text_to_speech("google is now ready for you")
+
+elif "weather" in user_data:
+    ans=weather.weather()
+    text_to_speech.text_to_speech(ans)
+
 
 else:
     text_to_speech.text_to_speech("I'm not able to understand")
