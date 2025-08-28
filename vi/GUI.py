@@ -1,5 +1,7 @@
 from tkinter import *
 from PIL import Image,ImageTk
+import speech_to_text
+import action
 root=Tk()
 root.title("MosaqAI-Assistant")
 root.geometry("550x675")
@@ -8,7 +10,13 @@ root.config(bg="#6F8FAF")
 
 #ask fun
 def ask():
-    print("ask")
+    ask_val=speech_to_text.speech_to_text()
+    user_val=action.Action(ask_val)
+    text.insert(END,'User-->'+ask_val+"\n")
+    if user_val!=None:
+        text.insert(END,"BOT<--"+str(user_val)+"\n")
+    if user_val=="ok sir":
+        root.destroy()
  
 #send fun
 def send():
@@ -29,7 +37,7 @@ text_label= Label(frame,text="MosaqAI-Assistant",font=("comic Sans MS",14,"bold"
 text_label.grid(row=0,column=0,padx=20,pady=10)
 
 #image
-image=ImageTk.PhotoImage(Image.open("sed.jpeg"))
+image=ImageTk.PhotoImage(Image.open("image/sed.jpeg"))
 image_label=Label(frame,image=image)
 image_label.grid(row=1,column=0,pady=20)
 
