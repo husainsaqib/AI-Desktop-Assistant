@@ -29,7 +29,7 @@ text_label= Label(frame,text="MosaqAI-Assistant",font=("comic Sans MS",14,"bold"
 text_label.grid(row=0,column=0,padx=20,pady=10)
 
 #image
-image=ImageTk.PhotoImage(Image.open("image/sed.jpeg"))
+image=ImageTk.PhotoImage(Image.open("./image/image.jpg"))
 image_label=Label(frame,image=image)
 image_label.grid(row=1,column=0,pady=20)
 
